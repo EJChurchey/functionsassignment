@@ -8,10 +8,40 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+bool IsOdd (int value) {
+    if (value % 2 == 0){
+        return false;
+    }else{
+        return true;
     }
+}
+
+bool IsEven (int value){
+    if (value % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+int main(int argc, const char * argv[]) {
+
+    
+    @autoreleasepool{
+        int i;
+        for (i=0;i<1001; i+=1){
+            if (IsEven(i)){
+                NSLog(@"even");
+        
+            }
+            if (IsOdd(i)){
+                NSLog(@"odd");
+            }
+            
+        }
+    }
+    
+    
     return 0;
+    
 }
